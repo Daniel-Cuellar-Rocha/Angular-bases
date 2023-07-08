@@ -1,0 +1,22 @@
+<p>list works!</p>
+<ul class="mt-2 list-group">
+    <li class="list-group-item">Spiderman </li>
+    <li class="list-group-item">Iroman </li>
+    <li class="list-group-item">Chapulin </li>
+    <li class="list-group-item">Daniel</li>
+</ul>
+<ul class="mt-2 list-group">
+    <li *ngFor="let name of heroNames" class="list-group-item"> {{name}} </li>
+    
+</ul>
+    <div *ngIf="deleteHero, else nadaBorrado" >
+    <h3 >Herue borrado
+    <small class="text-danger"> {{deleteHero}} </small>    
+</h3>
+</div>
+
+<ng-template #nadaBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<button (click)="removeLastHero()" class="btn btn-danger" > Borrar ultimo herue</button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Character } from '../../interfaces/character.interfaces';
 
 @Component({
@@ -6,14 +6,11 @@ import { Character } from '../../interfaces/character.interfaces';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
-  public characters:Character[] = [{
-    name:"krilin",
-    power:1000
-},{
-    name:"Goku",
-    power:10000
-
-}];
+export class ListComponent {  
+  @Input()
+  public listCharacter: Character[] =[{
+    name:"Trunks",
+    power: 10
+  }]
 
 }

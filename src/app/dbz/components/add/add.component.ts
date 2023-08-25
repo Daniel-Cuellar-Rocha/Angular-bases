@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../../interfaces/character.interfaces';
 
 @Component({
   selector: 'app-dbz-add',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
-  btndisable:boolean=true;
-  name:string="Daniel";
+  public Character: Character = {
+    name:"",
+    power: 0
+  }
+  emitCharacter():void{
+    console.log(this.Character)
+
+    this.Character.name= "",
+    this.Character.power= 0
+  }
 
 }

@@ -17,5 +17,10 @@ export class mainPage  {
 
 }];
 
+onNewCharacter2(character:Character): void{
+    console.log('MainPage')
+    console.log(character)
+}
+
     
 }

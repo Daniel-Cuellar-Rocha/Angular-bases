@@ -18,9 +18,13 @@ export class mainPage  {
 }];
 
 onNewCharacter2(character:Character): void{
-    console.log('MainPage')
+    this.characters.push(character);
     console.log(character)
 }
 
-    
+onDeletePersonaje(index:number){
+    this.characters.splice(index,1)
+    console.log(this.characters)
+
+}    
 }

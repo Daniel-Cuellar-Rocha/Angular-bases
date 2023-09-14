@@ -9,5 +9,16 @@ import { dbzService } from '../services/dbz.service';
 
 export class mainPage  {
 
-     constructor( public DBZService: dbzService){}
+     constructor( private DBZService: dbzService){}
+
+     get characters(): Character[]{
+        return [...this.DBZService.characters];
+    }
+    onDeleteCharacter(id:string):void{
+        this.DBZService.deleteCharacterByID(id);
+    }
+
+    onNewCharacter(character:Character){
+        this.DBZService.onNewCharacter2(character)
+    }
 }

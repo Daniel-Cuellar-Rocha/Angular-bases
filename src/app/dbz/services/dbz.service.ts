@@ -23,14 +23,15 @@ onNewCharacter2(character:Character): void{
     console.log(newCharacter)
 }
 
-onDeletePersonaje(index:number){
-    this.characters.splice(index,1)
-    console.log(this.characters)
+// onDeletePersonaje(index:number){
+//     this.characters.splice(index,1)
+//     console.log(this.characters)
 
-}  
+// }  
 
 deleteCharacterByID(id:string){
-    this.characters.filter
+    this.characters= this.characters.filter(character => character.id !== id);  
+    console.log(id)
 }
    
     
